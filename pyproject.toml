@@ -1,0 +1,17 @@
+[project]
+name = "playground-series-s5-ep8"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=6.30.1",
+    "joblib>=1.5.1",
+    "kaggle>=1.7.4.5",
+    "matplotlib>=3.10.5",
+    "numpy>=2.3.2",
+    "pandas>=2.3.1",
+    "scikit-learn>=1.7.1",
+    "seaborn>=0.13.2",
+    "xgboost>=3.0.4",
+]
