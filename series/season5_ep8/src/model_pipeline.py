@@ -1,7 +1,5 @@
 import pandas as pd
 
-from typing import Optional, Any
-
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.linear_model import LogisticRegression
@@ -9,13 +7,14 @@ from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.metrics import roc_auc_score
+from typing import Optional, Any
 
 from .config import random_state, n_job, verbose
 
 
 def build_pipeline(
     X: pd.DataFrame, Y: pd.Series, preprocessor: ColumnTransformer
-) -> tuple[dict[str, Any], dict[str, Any], Any]:
+) -> tuple[dict[str, Any], dict[str, Any], str]:
     models = {
         "Logistic": LogisticRegression(random_state=random_state, max_iter=1000, n_jobs=n_job, verbose=verbose),
         "Random Forest": RandomForestClassifier(

@@ -1,10 +1,10 @@
 import pandas as pd
 import numpy as np
 
-from typing import Any
-
 from sklearn.preprocessing import OneHotEncoder, KBinsDiscretizer, StandardScaler
 from sklearn.compose import ColumnTransformer
+
+from typing import Any
 
 
 # -----  Global ----- #
